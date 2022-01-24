@@ -9,8 +9,9 @@ return(
 <nav className="navbar" id="nav" >
 <div className="nav-container">
 <ul className="nav-left">
-    <li>
-  <img src={DD} alt=""/>
+    <li> <a href="">
+    <img src={DD} className='logo' alt=""/>
+    </a>
     </li>
     <li><a href="#">Products</a></li>
     <li><a href="#">Usage</a></li>
@@ -21,12 +22,7 @@ return(
 </ul>
 
 <ul className="nav-right">
-    <li> 
-        <a href="">
-            <img src={search} alt=""/>
-            <span>Search</span>
-        </a>
-    </li>
+
     <li className="XL">
         <a href="">
 <img src={cart} alt=""/>
