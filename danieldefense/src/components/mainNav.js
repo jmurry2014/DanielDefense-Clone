@@ -10,11 +10,11 @@ return(
 <div className="nav-container">
     <div className="mobile-container">
     <button>
-<section className='hamburger'>
+<div className='hamburger'>
 <div></div>
 <div></div>
 <div></div>
-</section>
+</div>
 </button>
 <li> 
     <a href="">

@@ -19,8 +19,8 @@ return(
 </header>
 
 
-<section className='promo'>
-    <div className="promo-container">
+<section className="promo">
+    
     <div className="promo-wrapper">
         <img src={aside1} alt=""/>
         <div className="promo-banner">
@@ -37,21 +37,20 @@ return(
         <button>Learn More</button>      
         </div>
   </div>
-    </div>
 </section>
 
 
-   <section className="accessories">
+   <div className="accessories">
        <div className="wrapper">
        <img src={accessories} alt="" />
        <div className="accessories-btn">
            <span>Accessories</span>
        </div>
        </div>
-   </section>
+   </div>
    
 
-<section className='showcase'>
+<div className='showcase'>
     <div className="showcase-container">
     <div className="showcase-wrapper">
         <img src={sport} alt=""/>
@@ -75,7 +74,7 @@ return(
   </div>
 
     </div>
-</section>
+</div>
 
 
 

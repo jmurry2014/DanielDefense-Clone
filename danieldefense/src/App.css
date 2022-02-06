@@ -76,7 +76,7 @@
 
 .logo {
   width: 140px;
-  height: 55px;
+  max-height: 55px;
 }
 
 .nav-right {
@@ -130,7 +130,7 @@ nav .actions {
 }
 nav .actions img {
   padding-right: 5px;
-  height: 20px;
+  max-height: 20px;
   width: 20px;
 }
 .actions li:first-child a {
@@ -143,29 +143,29 @@ header {
 }
 header img {
   width: 100%;
-  height: 650px;
+  max-height: 650px;
 }
 
-section .promo-container {
+section {
   display: flex;
-  gap: 2%;
-  align-items: center;
-  max-width: 75%;
+  gap: 4%;
+  max-width: 1320px;
   margin: 50px auto;
 }
-section .promo-container .promo-wrapper {
+section .promo-wrapper {
   display: block;
   margin: auto;
+  padding: 15px;
   position: relative;
   z-index: -1;
 }
 
-section .promo-container .promo-wrapper img {
-  max-width: 100%;
+section .promo-wrapper img {
+  width: 100%;
   height: auto;
 }
 
-section .promo-container .promo-wrapper .promo-banner {
+section .promo-wrapper .promo-banner {
   max-width: 570px;
   color: white;
   position: absolute;
@@ -173,7 +173,7 @@ section .promo-container .promo-wrapper .promo-banner {
   bottom: 30px;
   left: 30px;
 }
-section .promo-container .promo-wrapper .promo-banner h2 {
+section .promo-wrapper .promo-banner h2 {
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-weight: 700;
@@ -181,7 +181,7 @@ section .promo-container .promo-wrapper .promo-banner h2 {
   line-height: 44px;
   margin-bottom: 0;
 }
-section .promo-container .promo-wrapper .promo-banner p {
+section .promo-wrapper .promo-banner p {
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-weight: 300;
@@ -189,7 +189,7 @@ section .promo-container .promo-wrapper .promo-banner p {
   font-size: 1vw;
 }
 
-section .promo-container .promo-wrapper .promo-banner button {
+section .promo-wrapper .promo-banner button {
   background-image: none;
   background: #ffc632;
   border: 1px solid transparent;
@@ -199,8 +199,8 @@ section .promo-container .promo-wrapper .promo-banner button {
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-weight: 700;
-  padding: 11px 23px;
-  font-size: 1vw;
+  padding: 1.7% 4%;
+  font-size: 1em;
   box-sizing: border-box;
   vertical-align: middle;
   text-transform: uppercase;
