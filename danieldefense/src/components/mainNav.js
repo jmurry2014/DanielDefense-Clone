@@ -8,11 +8,30 @@ function Navigation(){
 return(
 <nav className="navbar" id="nav" >
 <div className="nav-container">
-<ul className="nav-left">
-    <li> <a href="">
+    <div className="mobile-container">
+    <button>
+<section className='hamburger'>
+<div></div>
+<div></div>
+<div></div>
+</section>
+</button>
+<li> 
+    <a href="">
     <img src={DD} className='logo' alt=""/>
     </a>
-    </li>
+</li>
+    </div>
+
+<ul className="nav-left">
+
+<li> 
+    <a href="">
+    <img src={DD} className='logo' alt=""/>
+    </a>
+</li>
+
+    
     <li><a href="#">Products</a></li>
     <li><a href="#">Usage</a></li>
     <li><a href="#">Support</a></li>

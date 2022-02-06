@@ -6,13 +6,16 @@ import defense from '../images/defense.jpg'
 import professional from '../images/professional.jpg'
 import accessories from '../images/accessories.jpg'
 import plus from '../images/plus.svg'
+import RIII from '../images/RIII_desktop.jpg'
 
 import pdw from '../images/pdw.jpg'
 function content(){
 return(
     <div>
 <header>
-<img src={pdw} alt=""/>
+    <img src={RIII} alt=""/>
+
+
 </header>
 
 

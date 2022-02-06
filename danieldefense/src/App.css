@@ -14,6 +14,7 @@
 }
 
 /* Navigation */
+/* navbar needs to become more responsive, i beleive making two seperate nav sections has hendered my responsiveness will try out different method */
 .nav-container {
   display: flex;
   align-items: center;
@@ -21,7 +22,16 @@
   margin: 0 auto;
   max-width: 1920px;
 }
-
+.nav-container .mobile-container {
+  visibility: hidden;
+}
+.navbar .hamburger div {
+  visibility: hidden;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+}
 .navbar {
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
@@ -31,11 +41,13 @@
   background: linear-gradient(
     40deg,
     rgba(255, 255, 255, 1) 80%,
-    rgba(255, 198, 50, 1) 80%
+    rgba(255, 198, 50, 1) 60%
   );
   overflow: hidden;
   background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
+  position: sticky; /* Set the navbar to fixed position */
+  top: 0;
+  box-shadow: 0 1px 9px 0px black;
 }
 
 .navbar ul {
@@ -72,11 +84,10 @@
   align-items: center;
 }
 .nav-right .XL {
-  padding-left: 100px;
-  margin-right: 100px;
+  padding-right: 200px;
 }
 .nav-right .XL a {
-  font-size: 1.5rem;
+  font-size: 25px;
 }
 
 .secondary-nav {
@@ -107,7 +118,7 @@
 }
 .secondaryNav-container {
   display: flex;
-  max-width: 1920px;
+  max-width: 1320px;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
@@ -128,18 +139,18 @@ nav .actions img {
 }
 /* main content */
 header {
-  max-width: 1920px;
-  max-height: 800px;
+  min-width: 1475px;
 }
 header img {
   width: 100%;
-  height: auto;
+  height: 650px;
 }
 
 section .promo-container {
   display: flex;
+  gap: 2%;
   align-items: center;
-  max-width: 1320px;
+  max-width: 75%;
   margin: 50px auto;
 }
 section .promo-container .promo-wrapper {
@@ -149,18 +160,24 @@ section .promo-container .promo-wrapper {
   z-index: -1;
 }
 
+section .promo-container .promo-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
 section .promo-container .promo-wrapper .promo-banner {
   max-width: 570px;
   color: white;
   position: absolute;
-  top: 50%;
-  left: 5%;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
 }
 section .promo-container .promo-wrapper .promo-banner h2 {
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2vw;
   line-height: 44px;
   margin-bottom: 0;
 }
@@ -169,6 +186,7 @@ section .promo-container .promo-wrapper .promo-banner p {
     sans-serif;
   font-weight: 300;
   margin: 0;
+  font-size: 1vw;
 }
 
 section .promo-container .promo-wrapper .promo-banner button {
@@ -182,7 +200,7 @@ section .promo-container .promo-wrapper .promo-banner button {
     sans-serif;
   font-weight: 700;
   padding: 11px 23px;
-  font-size: 1.3rem;
+  font-size: 1vw;
   box-sizing: border-box;
   vertical-align: middle;
   text-transform: uppercase;
@@ -228,8 +246,9 @@ section .promo-container .promo-wrapper .promo-banner button {
 }
 
 .showcase-container .showcase-wrapper img {
-  max-width: 410px;
   border-top: 6px solid #ffc632;
+  max-width: 100%;
+  height: auto;
 }
 
 /* showcase banner */
@@ -244,16 +263,16 @@ section .promo-container .promo-wrapper .promo-banner button {
   max-width: 570px;
   color: white;
   position: absolute;
-  top: 50%;
-  left: 5%;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
 }
 
 .showcase-container .showcase-wrapper .showcase-banner h2 {
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 69px;
+  font-size: 3vw;
   margin-bottom: 0;
   text-transform: uppercase;
 }
@@ -345,4 +364,61 @@ section .promo-container .promo-wrapper .promo-banner button {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-weight: bold;
+}
+
+/* @media screen and (max-width: 1130px) {
+  header {
+    min-width: 0;
+  }
+  header img {
+    content: url("https://danieldefense.com/media/wysiwyg/banners/RIII-home-page_800x800.jpg");
+  }
+} */
+
+/*  Large devices (desktops, 992px and up) */
+@media (max-width: 1120px) {
+  .navbar {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 90%,
+      rgba(255, 198, 50, 1) 60%
+    );
+  }
+
+  .navbar .hamburger {
+    padding: 25px;
+    border-right: 1px solid rgb(223, 217, 217);
+  }
+  .navbar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+  }
+  .navbar .hamburger div {
+    visibility: visible;
+  }
+
+  .navbar .nav-left {
+    visibility: hidden;
+  }
+  .nav-container .mobile-container {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+  }
+}
+/* tablets */
+@media screen and (max-width: 768px) {
+  header {
+    min-width: 0;
+  }
+  header img {
+    content: url("https://danieldefense.com/media/wysiwyg/banners/RIII-home-page_800x800.jpg");
+  }
+}
+/* small devices */
+@media (max-width: 576px) {
 }
