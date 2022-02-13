@@ -5,7 +5,10 @@ import cart from '../images/cart.svg'
 
 function Navigation(){
     function openSide() {
-        document.getElementById("side-menu").style.display='inline-block'
+        // document.getElementById("side-menu").style.display='inline-block'
+        // document.getElementById("side-menu").style.width='250px'
+        // document.getElementById("side-menu").style.marginLeft='250px'
+
     }
 return(
 <nav className="navbar" id="nav" >
