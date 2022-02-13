@@ -3,6 +3,8 @@ import aside1 from '../images/aside1.jpg'
 import aside2 from '../images/aside2.jpg'
 import sport from '../images/sport.jpg'
 import defense from '../images/defense.jpg'
+import magazine from '../images/magazine.jpg'
+
 import professional from '../images/professional.jpg'
 import accessories from '../images/accessories.jpg'
 import plus from '../images/plus.svg'
@@ -76,7 +78,35 @@ return(
     </div>
 </div>
 
+<div className="info-container">
+<div className="spotlight-block">
+<div className="spotlight">
+<img src={magazine} alt="DD MAGAZINE 12-PACK" />
+</div>
+<div className="product-info">
+<h4>Product Spotlight</h4>
+<h1>DD MAGAZINE 12-PACK</h1>
+<p>Its 32-round capacity is the most notable enhancement while maintaining the same size as industry-standard 30-round magazines.</p>
+<ul className='mag-facts'>
+<li>Lightweight carbon-fiber-reinforced polymer construction</li>
+<li>Surface grip feature for performance-driven control in all situations</li>
+<li>Improved feed lip design for optimized feeding and reliability</li>
+<li>Impact absorbing baseplate design for long-lasting durability</li>
+<li>Enhanced anti-tilt follower for reliable feeding</li>
+</ul>
+<button>Buy Now</button>
 
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
 
 
 

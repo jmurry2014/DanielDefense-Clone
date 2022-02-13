@@ -12,7 +12,15 @@
 ::after {
   box-sizing: inherit;
 }
-
+h1,
+h2,
+h4 {
+  font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+p {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 /* Navigation */
 /* navbar needs to become more responsive, i beleive making two seperate nav sections has hendered my responsiveness will try out different method */
 .nav-container {
@@ -20,10 +28,10 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: 1320px;
 }
 .nav-container .mobile-container {
-  visibility: hidden;
+  display: none;
 }
 .navbar .hamburger div {
   visibility: hidden;
@@ -40,7 +48,7 @@
   background: rgb(255, 255, 255);
   background: linear-gradient(
     40deg,
-    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255, 1) 77.5%,
     rgba(255, 198, 50, 1) 60%
   );
   overflow: hidden;
@@ -68,26 +76,25 @@
   transition: all 0.2s ease-in;
 }
 
+.navbar .nav-left li:last-of-type a {
+  color: black;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
 .nav-left {
   display: flex;
   align-items: center;
-  width: 1440px;
+  width: 100%;
 }
 
+.nav-left .XL {
+  margin-left: auto;
+}
 .logo {
   width: 140px;
   max-height: 55px;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-}
-.nav-right .XL {
-  padding-right: 200px;
-}
-.nav-right .XL a {
-  font-size: 25px;
 }
 
 .secondary-nav {
@@ -148,7 +155,6 @@ header img {
 
 section {
   display: flex;
-  gap: 4%;
   max-width: 1320px;
   margin: 50px auto;
 }
@@ -170,7 +176,7 @@ section .promo-wrapper .promo-banner {
   color: white;
   position: absolute;
   right: 30px;
-  bottom: 30px;
+  bottom: 50px;
   left: 30px;
 }
 section .promo-wrapper .promo-banner h2 {
@@ -223,6 +229,7 @@ section .promo-wrapper .promo-banner button {
   content: url(./images/plus.svg);
   filter: invert(79%) sepia(89%) saturate(1866%) hue-rotate(330deg)
     brightness(103%) contrast(100%);
+  vertical-align: middle;
 }
 
 .accessories .wrapper .accessories-btn span {
@@ -243,6 +250,7 @@ section .promo-wrapper .promo-banner button {
   margin: 50px auto;
   align-items: center;
   column-gap: 20px;
+  padding: 0 15px;
 }
 
 .showcase-container .showcase-wrapper img {
@@ -272,11 +280,87 @@ section .promo-wrapper .promo-banner button {
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-weight: 700;
-  font-size: 3vw;
+  /* use clamp for responsive font size  */
+  font-size: 2vw;
   margin-bottom: 0;
   text-transform: uppercase;
 }
 
+/* Spotlight and infographics */
+.info-container {
+  max-width: 1320px;
+  margin: 50px auto;
+}
+.spotlight-block {
+  display: flex;
+}
+.spotlight-block img {
+  width: 100%;
+  height: auto;
+}
+.spotlight-block .product-info {
+  padding: 30px;
+}
+.spotlight-block .product-info h1 {
+  font-size: 50px;
+  margin: 20px 0 10px 0;
+}
+.spotlight-block .product-info h4 {
+  margin: 20px 0;
+  color: #ffc632;
+  text-transform: uppercase;
+}
+
+.spotlight-block .product-info button {
+  background-image: none;
+  background: #ffc632;
+  border: 1px solid transparent;
+  color: #1a1517;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-weight: 700;
+  padding: 11px 23px;
+  font-size: 1em;
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.spotlight-block .product-info h4::before {
+  content: "";
+  display: block;
+  margin-bottom: 20px;
+  width: 35px;
+  border-top: 3px solid #ffc632;
+}
+.spotlight-block .product-info p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.spotlight-block .product-info ul {
+  padding-left: 13px;
+  margin: 20px 0;
+  list-style-type: none;
+  font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  letter-spacing: 0.5px;
+}
+.spotlight-block .product-info ul li {
+  margin-bottom: 15px;
+}
+.spotlight-block .product-info ul li::before {
+  content: url(./images/plus2.svg); /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  filter: invert(79%) sepia(89%) saturate(1866%) hue-rotate(330deg)
+    brightness(103%) contrast(100%); /* Change the color */
+  /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 2em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+  vertical-align: middle;
+}
 /* footer */
 .footer-container {
   max-width: 1920px;
@@ -337,6 +421,7 @@ section .promo-wrapper .promo-banner button {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  padding: 0 15px;
 }
 
 .upper-footer .title {
@@ -415,10 +500,12 @@ section .promo-wrapper .promo-banner button {
   header {
     min-width: 0;
   }
+
   header img {
     content: url("https://danieldefense.com/media/wysiwyg/banners/RIII-home-page_800x800.jpg");
   }
 }
+
 /* small devices */
 @media (max-width: 576px) {
 }
