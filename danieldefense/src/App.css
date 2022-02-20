@@ -150,7 +150,7 @@ nav .actions img {
 }
 /* main content */
 header {
-  min-width: 1475px;
+  max-width: 1920px;
 }
 header img {
   width: 100%;
