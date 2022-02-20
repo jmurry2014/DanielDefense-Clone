@@ -4,12 +4,23 @@ import search from '../images/search.svg'
 import cart from '../images/cart.svg'
 
 function Navigation(){
-    function openSide() {
-        // document.getElementById("side-menu").style.display='inline-block'
-        // document.getElementById("side-menu").style.width='250px'
-        // document.getElementById("side-menu").style.marginLeft='250px'
+    // create an if statement that will switch between display hidden and block
+    function openSideMenu() {
+        let sideBar=document.getElementById("side-menu");
+        let showSwitch=sideBar.getAttribute("data-show");
+     if(showSwitch=="hidden"){
+        sideBar.setAttribute("data-show", "visible"); 
+        document.getElementById("side-menu").style.display='block';
+     }
+   
 
-    }
+
+
+
+
+
+    }         
+
 return(
 <nav className="navbar" id="nav" >
 <div className="nav-container">
@@ -17,7 +28,7 @@ return(
     {/* Mobile navigation Menu */}
 <div className="mobile-container">
 
-    <button onClick={openSide} id='burger-menu' >
+    <button  onClick={openSideMenu} id='burger-menu' >
         <div className='hamburger'>
             <div></div>
             <div></div>

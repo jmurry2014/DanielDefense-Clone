@@ -13,7 +13,7 @@ import RIII from '../images/RIII_desktop.jpg'
 import pdw from '../images/pdw.jpg'
 function content(){
 return(
-    <div>
+    <div >
 <header>
     <img src={RIII} alt=""/>
 

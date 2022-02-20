@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 :root {
   box-sizing: border-box;
 }
@@ -146,62 +146,8 @@ nav .actions img {
 }
 /* Side Menu */
 #side-menu {
-  height: 100%;
-  width: 450px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  overflow-x: hidden;
-  padding-top: 60px;
-  transition: 0.5s;
+  display: none;
 }
-
-#side-menu ul {
-  list-style-type: none;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  padding: 0;
-  margin: 0;
-}
-
-#side-menu ul li {
-  list-style-type: none;
-  font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  width: 450px;
-  max-height: 48px;
-  font-weight: 700;
-  font-size: 18px;
-  padding: 15px 20px;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgb(223, 217, 217);
-  display: flex;
-  top: 0;
-}
-
-#side-menu ul li span {
-  margin-left: auto;
-  filter: invert(79%) sepia(89%) saturate(1866%) hue-rotate(330deg)
-    brightness(103%) contrast(100%);
-  vertical-align: middle;
-}
-#side-menu ul li a {
-  text-decoration: none;
-  color: black;
-  width: 100%;
-  height: 30px;
-}
-
-#side-menu ul li a:hover {
-  text-decoration: none;
-  color: #ffc632;
-  transition: all 0.2s ease-in;
-}
-
 /* main content */
 header {
   min-width: 1475px;
@@ -519,7 +465,7 @@ section .promo-wrapper .promo-banner button {
 } */
 
 /*  Large devices (desktops, 992px and up) */
-@media (max-width: 1120px) {
+@media (max-width: 1074px) {
   .navbar {
     background: rgb(255, 255, 255);
     background: linear-gradient(
@@ -544,13 +490,80 @@ section .promo-wrapper .promo-banner button {
   }
 
   .navbar .nav-left {
-    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
   }
   .nav-container .mobile-container {
     visibility: visible;
     display: flex;
     align-items: center;
     list-style-type: none;
+  }
+  /* Side Menu */
+
+  #side-menu {
+    height: 100%;
+    width: 450px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top: 60px;
+    box-shadow: 0 1px 90px 30px black;
+  }
+
+  #side-menu ul {
+    list-style-type: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  #side-menu ul li {
+    list-style-type: none;
+    font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+    width: 450px;
+    cursor: pointer;
+    max-height: 48px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(223, 217, 217);
+    display: flex;
+    top: 0;
+  }
+
+  #side-menu ul .test li {
+    font-weight: 400;
+  }
+  #side-menu ul li span {
+    margin-left: auto;
+    filter: invert(79%) sepia(89%) saturate(1866%) hue-rotate(330deg)
+      brightness(103%) contrast(100%);
+    vertical-align: middle;
+  }
+  #side-menu ul li a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 30px;
+  }
+
+  #side-menu ul li a:hover {
+    text-decoration: none;
+    transition: all 1.2 ease-in;
+
+    color: #ffc632;
+  }
+  [data-show="visible"] {
+    opacity: 1;
   }
 }
 /* tablets */
