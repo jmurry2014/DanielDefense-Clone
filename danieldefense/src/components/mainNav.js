@@ -7,19 +7,11 @@ function Navigation(){
     // create an if statement that will switch between display hidden and block
     function openSideMenu() {
         let sideBar=document.getElementById("side-menu");
-        let showSwitch=sideBar.getAttribute("data-show");
-     if(showSwitch=="hidden"){
-        sideBar.setAttribute("data-show", "visible"); 
-        document.getElementById("side-menu").style.display='block';
-     }
-   
+        let list=document.getElementById("tester");
+        list.style.visibility="visible";
+        sideBar.style.width="450px"
 
-
-
-
-
-
-    }         
+       }         
 
 return(
 <nav className="navbar" id="nav" >

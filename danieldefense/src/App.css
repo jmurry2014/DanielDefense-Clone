@@ -145,9 +145,7 @@ nav .actions img {
   align-items: center;
 }
 /* Side Menu */
-#side-menu {
-  display: none;
-}
+
 /* main content */
 header {
   max-width: 1920px;
@@ -427,6 +425,10 @@ section .promo-wrapper .promo-banner button {
   justify-content: space-between;
   padding: 0 15px;
 }
+.upper-footer .info {
+  margin-right: 20px;
+  white-space: nowrap;
+}
 
 .upper-footer .title {
   margin: 0;
@@ -448,6 +450,7 @@ section .promo-wrapper .promo-banner button {
 }
 .upper-footer h4 {
   margin-bottom: 10px;
+  font-size: 14px;
   color: #fff;
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
@@ -567,6 +570,11 @@ section .promo-wrapper .promo-banner button {
   }
 }
 /* tablets */
+@media screen and (min-width: 1068px) {
+  #side-menu {
+  }
+}
+
 @media screen and (max-width: 768px) {
   header {
     min-width: 0;
