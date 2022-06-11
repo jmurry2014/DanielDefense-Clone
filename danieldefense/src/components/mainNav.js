@@ -7,10 +7,8 @@ function Navigation(){
     // create an if statement that will switch between display hidden and block
     function openSideMenu() {
         let sideBar=document.getElementById("side-menu");
-        let list=document.getElementById("tester");
-        list.style.visibility="visible";
+        sideBar.style.display="block";
         sideBar.style.width="450px"
-
        }         
 
 return(
@@ -20,7 +18,7 @@ return(
     {/* Mobile navigation Menu */}
 <div className="mobile-container">
 
-    <button  onClick={openSideMenu} id='burger-menu' >
+    <button onClick={openSideMenu} id='burger-menu' >
         <div className='hamburger'>
             <div></div>
             <div></div>

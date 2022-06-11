@@ -2,16 +2,18 @@ import React from 'react'
 import arrow from '../images/arrow.svg'
 
 function sideMenu(){
-function test(){
+function menuClose(){
     let menu=document.getElementById("side-menu");
-    let list=document.getElementById("tester");
-    list.style.visibility="hidden"
-menu.style.width="0"
+    let list=document.getElementById("side-nav");
+    menu.style.display="none"
+    if(menu.style.display="none"){
+        menu.style.width=0;
+    }
 }
 return(
 <div id="side-menu" >
-<ul id="tester">
-        <a href="#" class="btn-close" onClick={test}>&times;</a>
+<ul id="side-nav">
+        <a href="#" class="btn-close" onClick={menuClose}>&times;</a>
 
     <li><a href="">Products</a> <span><img src={arrow} alt="Arrow" /></span></li>
     <li><a href="">Usage</a></li>
@@ -19,7 +21,7 @@ return(
     <li><a href="">Gear</a></li>
     <li><a href="">Blog</a></li>
     <li><a href="">About</a> <span><img src={arrow} alt="Arrow" /></span></li>
-    <div className="test">
+    <div className="menuClose">
     <li><a href="">Dealer Locator</a></li>
     <li><a href="">Sign In</a></li>
     </div>
