@@ -12,6 +12,8 @@ import RIII from '../images/RIII_desktop.jpg'
 
 import pdw from '../images/pdw.jpg'
 function content(){
+    console.log(window.innerWidth)
+
 return(
     <div >
 <header>

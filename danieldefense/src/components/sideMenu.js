@@ -4,7 +4,6 @@ import arrow from '../images/arrow.svg'
 function sideMenu(){
 function menuClose(){
     let menu=document.getElementById("side-menu");
-    let list=document.getElementById("side-nav");
     menu.style.display="none"
     if(menu.style.display="none"){
         menu.style.width=0;

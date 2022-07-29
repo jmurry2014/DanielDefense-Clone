@@ -5,6 +5,5 @@
            document.getElementById("nav2").style.display='none'
        
     }
-
-
 }
+

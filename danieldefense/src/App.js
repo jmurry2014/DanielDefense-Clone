@@ -15,7 +15,11 @@ function App() {
 <SecondaryNav />
 <MainNav />
 <SideNav />
+{/* Router */}
+
 <Home />
+
+{/* End of Router */}
 <Footer />
 <SimpleAccordion/>
     </div>

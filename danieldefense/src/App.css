@@ -29,6 +29,8 @@ p {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1320px;
+  z-index: 1100;
+  
 }
 .nav-container .mobile-container {
   display: none;
@@ -458,17 +460,51 @@ section .promo-wrapper .promo-banner button {
   font-weight: bold;
 }
 
+/* Mobile footer */
+.MuiAccordionDetails-root{
+  background-color: #1A1517;
+  }
+  #panel1a-header{
+    background-color: #1A1517;
+  }
+  
+  #panel2a-header{
+    background-color: #1A1517;
+  }
 
-/* @media screen and (max-width: 1130px) {
-  header {
-    min-width: 0;
+ .MuiAccordionSummary-content{
+    color: white;
+margin: 0 !important
   }
-  header img {
-    content: url("https://danieldefense.com/media/wysiwyg/banners/RIII-home-page_800x800.jpg");
+    #summaryContent{
+    font-weight: bolder;
+   
   }
-} */
+
+  .MuiSvgIcon-root{
+    color:#ffc632;
+  }
+
+  .info ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .info ul li{
+    color: rgba(255,255,255,.5)
+  }
+  
 
 /*  Large devices (desktops, 992px and up) */
+@media screen and (max-width: 1212px) {
+  section .promo-wrapper .promo-banner h2 {
+    font-size: 2.3vw;
+  }
+  section .promo-wrapper .promo-banner p {
+    font-size: 1.3vw;
+  }
+}
+
 @media screen and (max-width: 1074px) {
   .navbar {
     background: rgb(255, 255, 255);
@@ -545,9 +581,7 @@ section .promo-wrapper .promo-banner button {
   }
 
 
-  #side-menu ul .test li {
-    font-weight: 400;
-  }
+
   #side-menu ul li span {
     margin-left: auto;
     filter: invert(79%) sepia(89%) saturate(1866%) hue-rotate(330deg)
@@ -570,6 +604,7 @@ section .promo-wrapper .promo-banner button {
   [data-show="visible"] {
     opacity: 1;
   }
+  
 }
 /* tablets */
 @media screen and (min-width: 1068px) {
@@ -577,6 +612,28 @@ section .promo-wrapper .promo-banner button {
     display: none;
   }
 }
+@media screen and (max-width: 890px) {
+ .footer-container{
+  display: none;
+ }
+ .secondaryFooter-Container{
+  margin: 0 auto;
+  background-color: #1a1517;
+ }
+ .top-footer{
+  display: flex;
+  flex-direction: column;
+}
+
+}
+@media screen and (min-width: 890px) {
+  .secondaryFooter-Container{
+   display: none;
+
+  }
+ 
+  
+ }
 
 
 @media screen and (max-width: 768px) {
@@ -584,12 +641,27 @@ section .promo-wrapper .promo-banner button {
     min-width: 0;
   }
 
-
   header img {
     content: url("https://danieldefense.com/media/wysiwyg/banners/RIII-home-page_800x800.jpg");
   }
+
+
+  section .promo-wrapper .promo-banner h2 {
+    font-size: 2.6vw;
+  }
+  section .promo-wrapper .promo-banner p {
+    font-size: 1.6vw;
+  }
+  section .promo-wrapper .promo-banner button {
+    font-size: 2vw;
+  }
+
 }
 
-/* small devices */
-@media (max-width: 576px) {
-}
+
+
+
+
+
+
+
