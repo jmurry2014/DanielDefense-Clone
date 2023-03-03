@@ -21,6 +21,7 @@ h4 {
 p {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 /* Navigation */
 /* navbar needs to become more responsive, i beleive making two seperate nav sections has hendered my responsiveness will try out different method */
 .nav-container {
@@ -29,8 +30,6 @@ p {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1320px;
-  z-index: 1100;
-  
 }
 .nav-container .mobile-container {
   display: none;
@@ -147,14 +146,16 @@ nav .actions img {
   align-items: center;
 }
 /* Side Menu */
-
+#side-menu {
+  display: none;
+}
 /* main content */
 header {
   max-width: 1920px;
 }
 header img {
   width: 100%;
-  max-height: 650px;
+  max-height: 500px;
 }
 
 section {
@@ -382,7 +383,9 @@ section .promo-wrapper .promo-banner button {
   text-transform: uppercase;
   padding: 15px;
 }
-
+.top-footer svg{
+  color: grey;
+}
 .news-letter #email {
   padding: 10px 15px;
   height: 55.5px;
@@ -460,52 +463,21 @@ section .promo-wrapper .promo-banner button {
   font-weight: bold;
 }
 
-/* Mobile footer */
-.MuiAccordionDetails-root{
-  background-color: #1A1517;
-  }
-  #panel1a-header{
-    background-color: #1A1517;
-  }
-  
-  #panel2a-header{
-    background-color: #1A1517;
-  }
-
- .MuiAccordionSummary-content{
-    color: white;
-margin: 0 !important
-  }
-    #summaryContent{
-    font-weight: bolder;
-   
-  }
-
-  .MuiSvgIcon-root{
-    color:#ffc632;
-  }
-
-  .info ul {
-    list-style-type: none;
-    padding-left: 0;
-    padding-top: 0;
-  }
-  .info ul li{
-    color: rgba(255,255,255,.5)
-  }
-  
-
-/*  Large devices (desktops, 992px and up) */
-@media screen and (max-width: 1212px) {
-  section .promo-wrapper .promo-banner h2 {
-    font-size: 2.3vw;
-  }
-  section .promo-wrapper .promo-banner p {
-    font-size: 1.3vw;
-  }
+.secondaryfooter-container{
+  display: none;
 }
 
-@media screen and (max-width: 1074px) {
+/* @media screen and (max-width: 1130px) {
+  header {
+    min-width: 0;
+  }
+  header img {
+    content: url("https://danieldefense.com/media/wysiwyg/banners/RIII-home-page_800x800.jpg");
+  }
+} */
+
+/*  Large devices (desktops, 992px and up) */
+@media (max-width: 1074px) {
   .navbar {
     background: rgb(255, 255, 255);
     background: linear-gradient(
@@ -530,7 +502,8 @@ margin: 0 !important
   }
 
   .navbar .nav-left {
-    display: none;
+    opacity: 0;
+    transition: 0.5s;
   }
   .nav-container .mobile-container {
     visibility: visible;
@@ -545,7 +518,6 @@ margin: 0 !important
     width: 450px;
     position: fixed;
     z-index: 1;
-    display:none;
     top: 0;
     left: 0;
     background-color: #fff;
@@ -580,8 +552,9 @@ margin: 0 !important
     top: 0;
   }
 
-
-
+  #side-menu ul .test li {
+    font-weight: 400;
+  }
   #side-menu ul li span {
     margin-left: auto;
     filter: invert(79%) sepia(89%) saturate(1866%) hue-rotate(330deg)
@@ -604,38 +577,52 @@ margin: 0 !important
   [data-show="visible"] {
     opacity: 1;
   }
-  
+  .secondaryfooter-container{
+    display: block;
+  }
+  /* MUI TOOL MANIPULATION  */
+  .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root{
+    background-color: #1A1517 !important; 
+    color:white !important ;
+
+  }
+  .css-ahj2mt-MuiTypography-root{
+font-weight: 600 !important;
+  }
+
+  .css-yw020d-MuiAccordionSummary-expandIconWrapper {
+    color: #FDB700 !important;
+  }
+    /* END OF MUI TOOL MANIPULATION  */
+
+  .top-footer-mobile{
+background-color: #1A1517;
+color: white;
+padding-left: 15px;
+padding-right: 15px;
+padding-top: 25px;
+  }
+  .top-footer-mobile svg{
+    color: grey;
+  }
+  .top-footer-mobile h4{
+    font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
+      }
+      .top-footer-mobile ul{
+margin-bottom: 0;  
+padding-bottom: 15px;       
+ }
+.upper-footer{
+  display:none;
+}
+.top-footer{
+  display:none;
+}
+hr{
+  display:none;
+}
 }
 /* tablets */
-@media screen and (min-width: 1068px) {
-  #side-nav{
-    display: none;
-  }
-}
-@media screen and (max-width: 890px) {
- .footer-container{
-  display: none;
- }
- .secondaryFooter-Container{
-  margin: 0 auto;
-  background-color: #1a1517;
- }
- .top-footer{
-  display: flex;
-  flex-direction: column;
-}
-
-}
-@media screen and (min-width: 890px) {
-  .secondaryFooter-Container{
-   display: none;
-
-  }
- 
-  
- }
-
-
 @media screen and (max-width: 768px) {
   header {
     min-width: 0;
@@ -644,24 +631,8 @@ margin: 0 !important
   header img {
     content: url("https://danieldefense.com/media/wysiwyg/banners/RIII-home-page_800x800.jpg");
   }
-
-
-  section .promo-wrapper .promo-banner h2 {
-    font-size: 2.6vw;
-  }
-  section .promo-wrapper .promo-banner p {
-    font-size: 1.6vw;
-  }
-  section .promo-wrapper .promo-banner button {
-    font-size: 2vw;
-  }
-
 }
 
-
-
-
-
-
-
-
+/* small devices */
+@media (max-width: 576px) {
+}
